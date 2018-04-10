@@ -13,6 +13,7 @@ void Test::run(){
 
   LinkedListOfInts mylist;
   bool searchFlag = true;
+  bool addBackFlag = true;
   cout << "============================\n";
   cout << "Test01 addBack() AND isEmpty() AND size() AND search():\n";
   cout << "List is empty in the beginning, start addback and search each elements: 1..10\n";
@@ -31,7 +32,17 @@ void Test::run(){
   if(mylist.size()==mylist.toVector().size()){
     for(unsigned int i=0;i<mylist.toVector().size();i++){
       cout << mylist.toVector()[i]<<" "; //add 1..10
+      if(mylist.toVector()[i]!=i+1){
+        addBackFlag = false;
+      }
     }
+    cout << "\n";
+    if(addBackFlag ==false){
+      cout << "addBack() FAILED";
+    }else{
+      cout << "addBack() PASSED";
+    }
+
   }else{
     cout << "size FAILED;\n";
   }
