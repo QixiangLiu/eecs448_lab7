@@ -1,0 +1,10 @@
+Not working:
+isEmpty();
+removeBack();
+removeFront();
+addBack();
+
+Reasons:
+isEmpty() always return True whatever empty list or nonempty list.
+addBack() is the same as addFront(), the order is wrong.
+removeBack() and removeFront() did not remove anything, and size did not be decreased.
